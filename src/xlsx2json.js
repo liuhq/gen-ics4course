@@ -1,18 +1,11 @@
-import { readFile, utils } from 'xlsx'
-import parseDatetime from './parseDatetime.js'
+import XLSX from 'xlsx'
+import parseData from './parseData.js'
 
 export default function xlsx2json(filePath) {
-    const wb = readFile(filePath)
+    const wb = XLSX.readFile(filePath)
     const ws = wb.Sheets[wb.SheetNames[0]]
-    const rawData = utils.sheet_to_json(ws, { raw: false })
-
-    const data = rawData.map(v => ({
-        title: v.title,
-        start: parseDatetime(v.startDate, v.startTime),
-        end: parseDatetime(v.endDate, v.endTime),
-        description: v.description,
-        location: v.location
-    }))
+    const rawData = XLSX.utils.sheet_to_json(ws, { raw: false })
+    const data = rawData.map(raw => parseData(raw))
 
     return data
 }

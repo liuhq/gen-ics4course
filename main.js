@@ -1,14 +1,9 @@
 import { writeFile } from 'node:fs/promises'
 import { resolve } from 'node:path'
-import ics from 'ics'
-import csv2json from './src/csv2json.js'
+import { genIcs } from './src/genIcs.js'
 
-const file = resolve(import.meta.dirname, 'example', 'courses.csv')
-const events = await csv2json(file)
-const {error, value} = ics.createEvents(events)
+const file = resolve(import.meta.dirname, 'example', 'sample.csv')
 
-if (error) {
-    console.error(error)
-}
+const icsContent = await genIcs(file)
 
-await writeFile('courses.ics', value)
+await writeFile('courses.ics', icsContent)
