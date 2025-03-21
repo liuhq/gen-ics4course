@@ -14,7 +14,6 @@ export default async function csv2json(filePath) {
                 events.push(parseData(raw))
             })
             .on('end', rowCount => {
-                console.log(`Parsed ${rowCount} rows`)
                 csvStream.destroy()
                 resolve(events)
             })

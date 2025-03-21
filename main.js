@@ -1,9 +1,22 @@
+#!/usr/bin/env node
+
+import parseArg from './src/parseArg.js'
 import { writeFile } from 'node:fs/promises'
-import { resolve } from 'node:path'
 import { genIcs } from './src/genIcs.js'
 
-const file = resolve(import.meta.dirname, 'example', 'sample.csv')
+const argv = parseArg(process.argv)
+const { if: source, of: target } = argv
 
-const icsContent = await genIcs(file)
+console.log('Source File ->', source)
+console.log('Target File <-', target, '\n')
 
-await writeFile('courses.ics', icsContent)
+const icsContent = await genIcs(source)
+
+console.log('ICS Content Preview:\n------\n')
+console.log(icsContent)
+console.log('------')
+console.log(`Generate ICS file to ${target}...`)
+
+await writeFile(target, icsContent)
+
+console.log('Finished!')
