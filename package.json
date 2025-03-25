@@ -1,5 +1,5 @@
 {
-  "name": "@horin/gen-ics4course",
+  "name": "@horin-tools/gen-ics4course",
   "description": "Generate an ics file for subscribing courses",
   "version": "0.1.0",
   "license": "MIT",
