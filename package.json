@@ -1,5 +1,5 @@
 {
-  "name": "gen-ics4course",
+  "name": "@horin/gen-ics4course",
   "description": "Generate an ics file for subscribing courses",
   "version": "0.1.0",
   "license": "MIT",
@@ -16,12 +16,15 @@
   "bugs": {
     "url": "https://github.com/liuhq/gen-ics4course/issues"
   },
-	"type": "module",
-  "bin": "./main.js",
-	"dependencies": {
-		"@fast-csv/parse": "^5.0.2",
-		"ics": "^3.8.1",
-		"xlsx": "^0.18.5",
-		"yargs": "^17.7.2"
-	}
+  "type": "module",
+  "bin": {
+    "gen-ics": "main.js"
+  },
+  "dependencies": {
+    "@fast-csv/parse": "^5.0.2",
+    "date-fns": "^4.1.0",
+    "ics": "^3.8.1",
+    "xlsx": "^0.18.5",
+    "yargs": "^17.7.2"
+  }
 }

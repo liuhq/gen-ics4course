@@ -10,6 +10,8 @@ const { if: source, of: target } = argv
 console.log('Source File ->', source)
 console.log('Target File <-', target, '\n')
 
+console.log('Parsing Raw Data...')
+
 const icsContent = await genIcs(source)
 
 console.log('ICS Content Preview:\n------\n')

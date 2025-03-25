@@ -11,6 +11,9 @@ importers:
       '@fast-csv/parse':
         specifier: ^5.0.2
         version: 5.0.2
+      date-fns:
+        specifier: ^4.1.0
+        version: 4.1.0
       ics:
         specifier: ^3.8.1
         version: 3.8.1
@@ -61,6 +64,9 @@ packages:
     resolution: {integrity: sha512-ROmzCKrTnOwybPcJApAA6WBWij23HVfGVNKqqrZpuyZOHqK2CwHSvpGuyt/UNNvaIjEd8X5IFGp4Mh+Ie1IHJQ==}
     engines: {node: '>=0.8'}
     hasBin: true
+
+  date-fns@4.1.0:
+    resolution: {integrity: sha512-Ukq0owbQXxa/U3EGtsdVBkR1w7KOQ5gIBqdH2hkvknzZPYvBxb/aa6E8L7tmjFtkwZBu3UXBbjIgPo/Ez4xaNg==}
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -210,6 +216,8 @@ snapshots:
   color-name@1.1.4: {}
 
   crc-32@1.2.2: {}
+
+  date-fns@4.1.0: {}
 
   emoji-regex@8.0.0: {}
 
