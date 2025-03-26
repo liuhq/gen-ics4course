@@ -32,4 +32,4 @@ npx @horin-tools/gen-ics4course -h
 
 ## License
 
-[MIT](./LICENSE
+[MIT](./LICENSE)
