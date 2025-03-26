@@ -15,6 +15,18 @@ export default function parseArg(argv) {
                 type: 'string',
             },
         })
+        .check((argv, _options) => {
+            const ifValue = argv.if.split('.')
+            if (
+                ifValue.length < 2 ||
+                ifValue.at(-1) != 'csv' ||
+                ifValue.at(-1) != 'xlsx'
+            ) {
+                throw new Error('[Error] Only supported formats: csv, xlsx')
+            } else {
+                return true
+            }
+        })
         .alias({
             version: 'v',
             help: 'h',

@@ -1,7 +1,7 @@
 {
   "name": "@horin-tools/gen-ics4course",
   "description": "Generate an ics file for subscribing courses",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "license": "MIT",
   "author": {
     "name": "Horace Liu",
@@ -11,15 +11,19 @@
   "homepage": "https://github.com/liuhq/gen-ics4course",
   "repository": {
     "type": "git",
-    "url": "https://github.com/liuhq/gen-ics4course.git"
+    "url": "git+https://github.com/liuhq/gen-ics4course.git"
   },
   "bugs": {
     "url": "https://github.com/liuhq/gen-ics4course/issues"
   },
   "type": "module",
   "bin": {
-    "gen-ics": "main.js"
+    "gen-ics4course": "main.js"
   },
+  "files": [
+    "main.js",
+    "src"
+  ],
   "dependencies": {
     "@fast-csv/parse": "^5.0.2",
     "date-fns": "^4.1.0",
