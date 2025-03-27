@@ -22,6 +22,18 @@ npx @horin-tools/gen-ics4course --help
 npx @horin-tools/gen-ics4course -h
 ```
 
+|field|description|
+|------|------|
+|title|The title of the event.|
+|startDate|The start date of the event, in the format: YYYY-MM-DD.|
+|startTime|The start time of the event, in the format: HH:MM (24-hour format).|
+|endDate|The end date of the event, in the format: YYYY-MM-DD.|
+|endTime|The end time of the event, in the format: HH:MM (24-hour format).|
+|description|A detailed description of the event (optional).|
+|location|The location of the event (optional).|
+
+you can get the sample files from [here](https://github.com/liuhq/gen-ics4course/releases)
+
 ## Thanks
 
 - [fast-csv](https://github.com/C2FO/fast-csv)
