@@ -1,7 +1,7 @@
 {
   "name": "@horin-tools/gen-ics4course",
   "description": "Generate an ics file for subscribing courses",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT",
   "author": {
     "name": "Horace Liu",
